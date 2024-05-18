@@ -50,7 +50,7 @@ def rabin_miler(n:int, a:int) -> int:
 def composite(n:int, start:int, end:int) -> None:
     result:list = []
     for i in range(start, end+1):
-        result.append(rabin_miler(47197, i))
+        result.append(rabin_miler(n, i))
     print("\n=================================")
     for r in result:
         if r != 1:
