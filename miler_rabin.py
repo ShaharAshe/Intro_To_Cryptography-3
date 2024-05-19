@@ -48,17 +48,16 @@ def rabin_miler(n:int, a:int) -> int:
 
 
 def composite(n:int, start:int, end:int) -> None:
-    result:list = []
     for i in range(start, end+1):
-        result.append(rabin_miler(n, i))
-    print("\n=================================")
-    for r in result:
-        if r != 1:
-            temp_gcd:int = gcd(n, r-1)
-            print(f'gcd({n}, {r}) = {temp_gcd}')
+        result:int = rabin_miler(n, i)
+        if result != 1:
+            temp_gcd:int = gcd(n, result-1)
+            print(f'gcd({n}, {result}) = {temp_gcd}')
             if temp_gcd != 1 and temp_gcd != n:
-                print(f'and we found that the composite is {n} = {temp_gcd} * {n//temp_gcd}')
+                print(f'and we found that the composite is {n} = {temp_gcd} * {n//temp_gcd}', end='\n/////////////////////////////////')
                 break
+            print("/////////////////////////////////")
+        print()
         
 
 if __name__ == "__main__":
