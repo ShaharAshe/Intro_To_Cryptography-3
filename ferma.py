@@ -22,7 +22,7 @@ def fermat(n:int) -> tuple[int, int]:
     print("The factors are: x-y and x+y, where x and y are the values from the table above, and n is the number to be factored.\n")
     print(f'{x = }, {y = }, {n = }\n')
     print(f'({x}-{y})({x}+{y}) = {x}^2 - {y}^2 = {n}')
-    return (x-y, x+y)
+
 
 if __name__ == "__main__":
-    print(fermat(47197))
+    fermat(47197)
