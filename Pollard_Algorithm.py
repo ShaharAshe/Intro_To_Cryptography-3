@@ -25,4 +25,4 @@ def pollard_algorithm(n:int):
 
 
 if __name__ == "__main__":
-    pollard_algorithm(168163)
+    pollard_algorithm(15707)
